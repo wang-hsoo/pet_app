@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     >
 
 
@@ -13,46 +14,102 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="이름"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:layout_weight="1"
+            />
+
+    <EditText
+        android:id="@+id/pet_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pet 이름"
+        android:textSize="15dp"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아이디"
+        android:textSize="15dp"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/userPw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        android:textSize="15dp"
+        android:layout_weight="1"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/userPwCh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 확인"
+        android:textSize="15dp"
+        android:layout_weight="1"
+        android:inputType="textPassword"/>
 
 
         <EditText
             android:id="@+id/edit_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="나이"
+            android:hint="pet 나이"
             android:inputType="number"
             android:textSize="15dp"
-            android:maxLength="3"/>
+            android:maxLength="3"
+            android:layout_weight="1"/>
 
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <RadioButton
                 android:id="@+id/m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="수컷" />
+                android:hint="수컷"
+                android:checked="true"
+                android:layout_weight="1"
+                />
 
             <RadioButton
                 android:id="@+id/g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="암컷" />
+                android:hint="암컷"
+                android:layout_weight="1"/>
         </RadioGroup>
 
     
-
+        <EditText
+            android:id="@+id/bDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pet 생일"
+            android:onClick="showDatePicker"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            />
 
         <EditText
             android:id="@+id/vaccine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="1차 접종일"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:onClick="datepicker"
+            android:layout_weight="1"
+            android:focusable="false"
+            />
 
         <Button
             android:id="@+id/send"
@@ -61,7 +118,8 @@
             android:enabled="true"
             android:gravity="right"
             android:text="Send"
-            android:textSize="13dp" />
+            android:textSize="13dp"
+            />
 
 
 

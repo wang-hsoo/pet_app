@@ -3,23 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="50dp"
     >
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아이디"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밇번호"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"/>
 
     <Button
         android:id="@+id/membership"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="회원가입"
-
+        android:text="회원가입"
         />
 
-    <Button
-        android:id="@+id/introduce"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="소개해요"
-        />
 
 
 </LinearLayout>

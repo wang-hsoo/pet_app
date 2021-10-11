@@ -36,6 +36,7 @@ public class introduce extends AppCompatActivity {
     Button button;
     Button userButton1;
     Button userButton2;
+    LinearLayout user1Layout, user2Layout;
 
 
 
@@ -53,6 +54,8 @@ public class introduce extends AppCompatActivity {
         button = findViewById(R.id.button);
         userButton1 = findViewById(R.id.userButton1);
         userButton2 = findViewById(R.id.userButton2);
+        user1Layout = findViewById(R.id.user1Layouyt);
+        user2Layout = findViewById(R.id.user2Layouyt);
 
 
 
@@ -84,6 +87,22 @@ public class introduce extends AppCompatActivity {
                 startActivityForResult(intent, 1);
             }
 
+        });
+
+        userButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user1Layout.setVisibility(View.VISIBLE);
+                user2Layout.setVisibility(View.GONE);
+            }
+        });
+
+        userButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user2Layout.setVisibility(View.VISIBLE);
+                user1Layout.setVisibility(View.GONE);
+            }
         });
 
 

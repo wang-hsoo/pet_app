@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -12,11 +11,7 @@
         android:layout_height="300dp"
         android:visibility="gone"
         android:layout_gravity ="center"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
+
         />
 
     <Button
@@ -24,44 +19,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
+        android:layout_marginBottom="172dp"
         android:background="#FCF6F5"
         android:text="사진설정"
         android:textColor="#FCF6F5"
-        app:backgroundTint="#7B9ACC"
-        app:iconTint="#FCF6F5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:rippleColor="#FFFFFF" />
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+        <Button
+            android:id="@+id/userButton1"
+            android:layout_width="205dp"
+            android:layout_height="63dp"
+            android:drawableTop="@drawable/user_icon"
+            android:gravity="center"
+            android:layout_gravity="left"
+         />
+
+        <Button
+            android:id="@+id/userButton2"
+            android:layout_width="205dp"
+            android:layout_height="63dp"
+            android:layout_gravity="right"
+            android:drawableTop="@drawable/menu_box"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user1Layouyt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="버튼" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user2Layouyt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="버튼2" />
+
+    </LinearLayout>
 
 
-    <Button
-        android:id="@+id/userButton1"
-        android:layout_width="210dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="212dp"
-        android:layout_marginRight="212dp"
-        android:drawableTop="@drawable/user_icon"
-        android:gravity="center"
-        app:backgroundTint="#7B9ACC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/userButton2"
-        android:layout_width="210dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:drawableTop="@drawable/menu_box"
-        android:gravity="center"
-        app:backgroundTint="#7B9ACC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

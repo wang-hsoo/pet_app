@@ -30,7 +30,6 @@ import com.example.petapp.R;
 
 public class MainActivity extends AppCompatActivity {
     Button membership;
-    Button introduce;
 
 
 
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         membership = findViewById(R.id.membership);
-        introduce = findViewById(R.id.introduce);
 
         membership.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,13 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        introduce.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), introduce.class);
-                startActivity(intent);
-            }
-        });
+
 
 
     }
