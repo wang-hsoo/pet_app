@@ -29,7 +29,7 @@ import java.util.GregorianCalendar;
 import com.example.petapp.R;
 
 public class MainActivity extends AppCompatActivity {
-    Button membership;
+    Button membership, login;
 
 
 
@@ -38,11 +38,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         membership = findViewById(R.id.membership);
+        login = findViewById(R.id.login);
 
         membership.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), membership.class);
+                startActivity(intent);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), introduce.class);
                 startActivity(intent);
             }
         });

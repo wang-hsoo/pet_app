@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="230dp"
         android:visibility="gone"
         android:layout_gravity ="center"
 
@@ -18,8 +18,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="110dp"
         android:background="#FCF6F5"
         android:text="사진설정"
         android:textColor="#FCF6F5"
@@ -27,52 +27,159 @@
         />
 
     <LinearLayout
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     >
         <Button
             android:id="@+id/userButton1"
-            android:layout_width="205dp"
+            android:layout_width="0dp"
             android:layout_height="63dp"
             android:drawableTop="@drawable/user_icon"
             android:gravity="center"
             android:layout_gravity="left"
-         />
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/userButton2"
-            android:layout_width="205dp"
+            android:layout_width="0dp"
             android:layout_height="63dp"
             android:layout_gravity="right"
             android:drawableTop="@drawable/menu_box"
-            android:gravity="center" />
+            android:gravity="center"
+            android:layout_weight="1"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/user1Layouyt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <Button
-            android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/user1Scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/user1Layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="버튼" />
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="버튼" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/user2Layouyt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:visibility="gone"
         >
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="버튼2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/question"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/training"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/training"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/conversation"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/introduce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/introduce"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
 
     </LinearLayout>
 

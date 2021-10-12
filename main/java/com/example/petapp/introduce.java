@@ -23,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import android.app.DatePickerDialog;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.Toast;
 import java.util.GregorianCalendar;
 
@@ -37,6 +38,7 @@ public class introduce extends AppCompatActivity {
     Button userButton1;
     Button userButton2;
     LinearLayout user1Layout, user2Layout;
+    ScrollView user1Scroll;
 
 
 
@@ -54,8 +56,9 @@ public class introduce extends AppCompatActivity {
         button = findViewById(R.id.button);
         userButton1 = findViewById(R.id.userButton1);
         userButton2 = findViewById(R.id.userButton2);
-        user1Layout = findViewById(R.id.user1Layouyt);
+        user1Layout = findViewById(R.id.user1Layout);
         user2Layout = findViewById(R.id.user2Layouyt);
+        user1Scroll = findViewById(R.id.user1Scroll);
 
 
 
@@ -92,6 +95,7 @@ public class introduce extends AppCompatActivity {
         userButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                user1Scroll.setVisibility(View.VISIBLE);
                 user1Layout.setVisibility(View.VISIBLE);
                 user2Layout.setVisibility(View.GONE);
             }
@@ -102,6 +106,7 @@ public class introduce extends AppCompatActivity {
             public void onClick(View v) {
                 user2Layout.setVisibility(View.VISIBLE);
                 user1Layout.setVisibility(View.GONE);
+                user1Scroll.setVisibility(View.GONE);
             }
         });
 
