@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -23,6 +24,7 @@ import android.widget.LinearLayout;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import java.util.GregorianCalendar;
 import android.widget.DatePicker;
@@ -71,6 +73,7 @@ public class membership extends AppCompatActivity {
     //이미지 뷰, 메뉴누르면 전환
     String TAG = "MainActivity";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +92,11 @@ public class membership extends AppCompatActivity {
         userPw =findViewById(R.id.userPw);
         userPwCh =findViewById(R.id.userPwCh);
 
+
+
+
+
+
         setTitle("회원가입");
 
 
@@ -96,6 +104,8 @@ public class membership extends AppCompatActivity {
 
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             public void onClick(View v) {
+
+
                 if (edit_name.length() == 0 || edit_age.length() == 0 || vaccine.length() == 0 || pet_name.length() == 0 || userId.length() == 0 || userPw.length() == 0 || userPwCh.length() == 0 || bDate.length() == 0 ) {
                     Toast.makeText(getApplicationContext(), "공백부분을 입력해주세요!", Toast.LENGTH_SHORT).show();
 
@@ -149,8 +159,20 @@ public class membership extends AppCompatActivity {
 
                 } else if( userPw.getText().toString().equals(userPwCh.getText().toString())){
                     Toast.makeText(getApplicationContext(), "회원가입완료", Toast.LENGTH_SHORT).show();
+                    String temp = edit_name.getText().toString();
+                    String pName = pet_name.getText().toString();
+                    String eAge = edit_age.getText().toString();
+                    String bD = bDate.getText().toString();
+                    String vac = vaccine.getText().toString();
                     Intent intent = new Intent(getApplicationContext(), introduce.class);
+                    intent.putExtra("edit_name",temp);
+                    intent.putExtra("pet_name",pName);
+                    intent.putExtra("edit_age",eAge);
+                    intent.putExtra("bDate",bD);
+                    intent.putExtra("vaccine",vac);
+
                     startActivity(intent);
+
                 }else{
                     Toast.makeText(getApplicationContext(), "비밀번호를 다시 확인해주세요!", Toast.LENGTH_SHORT).show();
                     userPw.setBackgroundTintList(ColorStateList.valueOf(Color.RED));

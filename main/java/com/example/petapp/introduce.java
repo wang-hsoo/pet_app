@@ -24,6 +24,7 @@ import java.util.Calendar;
 import android.app.DatePickerDialog;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.GregorianCalendar;
 
@@ -39,6 +40,7 @@ public class introduce extends AppCompatActivity {
     Button userButton2;
     LinearLayout user1Layout, user2Layout;
     ScrollView user1Scroll;
+    TextView user_name, pet_name, edit_age, bDate, vaccine;
 
 
 
@@ -59,6 +61,11 @@ public class introduce extends AppCompatActivity {
         user1Layout = findViewById(R.id.user1Layout);
         user2Layout = findViewById(R.id.user2Layouyt);
         user1Scroll = findViewById(R.id.user1Scroll);
+        user_name = findViewById(R.id.user_name);
+        pet_name = findViewById(R.id.pet_name);
+        edit_age = findViewById(R.id.edit_age);
+        bDate = findViewById(R.id.bDate);
+        vaccine = findViewById(R.id.vaccine);
 
 
 
@@ -110,6 +117,17 @@ public class introduce extends AppCompatActivity {
             }
         });
 
+        Intent receive_intent = getIntent();
+        String temp = receive_intent.getStringExtra("edit_name");
+        String pName = receive_intent.getStringExtra("pet_name");
+        String eAge = receive_intent.getStringExtra("edit_age");
+        String bD = receive_intent.getStringExtra("bDate");
+        String vac = receive_intent.getStringExtra("vaccine");
+        user_name.setText(temp);
+        pet_name.setText(pName);
+        edit_age.setText(eAge);
+        bDate.setText(bD);
+        vaccine.setText(vac);
 
 
     }

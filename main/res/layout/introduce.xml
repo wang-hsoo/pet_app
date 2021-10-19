@@ -62,53 +62,49 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
+                android:layout_marginTop="15dp"
+                android:textSize="17dp"
+                android:text="이름: "
+                 />
+            <TextView
+                android:id="@+id/pet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="17dp"
+                android:text="PET 이름: "
 
-            <Button
-                android:layout_width="wrap_content"
+                />
+            <TextView
+                android:id="@+id/edit_age"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
+                android:layout_marginTop="15dp"
+                android:textSize="17dp"
+                android:text="PET 나이: "
 
-            <Button
-                android:layout_width="wrap_content"
+                />
+            <TextView
+                android:id="@+id/bDate"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
+                android:layout_marginTop="15dp"
+                android:textSize="17dp"
 
-            <Button
-                android:layout_width="wrap_content"
+                />
+            <TextView
+                android:id="@+id/vaccine"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
+                android:layout_marginTop="15dp"
+                android:textSize="17dp"
+                />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="버튼" />
 
 
         </LinearLayout>

@@ -75,7 +75,7 @@
                 android:id="@+id/m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="수컷"
+                android:text="수컷"
                 android:checked="true"
                 android:layout_weight="1"
                 />
@@ -84,7 +84,7 @@
                 android:id="@+id/g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="암컷"
+                android:text="암컷"
                 android:layout_weight="1"/>
         </RadioGroup>
 
