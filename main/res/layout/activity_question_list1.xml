@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="446dp"
+            android:layout_height="wrap_content"
+            android:text="게시글 만들기" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageButton
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/question"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/training"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/training"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/conversation"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/introduce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/introduce"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

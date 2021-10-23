@@ -19,6 +19,19 @@
 
         <activity android:name=".introduce"/>
         <activity android:name=".membership"/>
+        <activity android:name=".trainingMain"/>
+        <activity android:name=".trainingSub1"/>
+        <activity android:name=".trainingSub2"/>
+        <activity android:name=".trainingSub3"/>
+        <activity android:name=".conversation"/>
+        <activity android:name=".conversation_list"/>
+        <activity android:name=".conversation_list2"/>
+        <activity android:name=".question"/>
+        <activity android:name=".question_list1"/>
+        <activity android:name=".question_list2"/>
+        <activity android:name=".question_list3"/>
+
+
     </application>
 
 </manifest>

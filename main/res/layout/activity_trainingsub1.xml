@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trainingSub1">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="강아지 기다려 훈련 기초편 "
+        android:textSize="32sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"/>
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="400dp"
+        android:layout_height="240dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/textView"
+        />
+
+    <TextView
+        android:text="이번 시간은 기다려 훈련 기초편입니다. "
+        android:textSize="25dp"
+        android:paddingTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageButton
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/question"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/training"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/training"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/conversation"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/introduce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/introduce"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

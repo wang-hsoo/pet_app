@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="" />
+
+
+    <ImageView
+        android:layout_width="253dp"
+        android:layout_height="185dp"
+        android:layout_margin="70dp"
+        android:src="@drawable/dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/txt_next1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/function_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ip23"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mag" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/name_activity_sub"
+        android:layout_width="62dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="12dp"
+        android:background="@drawable/plan" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="160dp"
+        >
+
+        <ImageButton
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/question"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/training"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/training"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/conversation"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/introduce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/introduce"
+            android:adjustViewBounds = "true"
+            android:scaleType = "fitCenter"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
