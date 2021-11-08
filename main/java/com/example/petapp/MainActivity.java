@@ -30,6 +30,7 @@ import com.example.petapp.R;
 
 public class MainActivity extends AppCompatActivity {
     Button membership, login;
+    EditText et_id,et_pass;
 
 
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         membership = findViewById(R.id.membership);
         login = findViewById(R.id.login);
+        et_pass = findViewById(R.id.et_pass);
+        et_id = findViewById(R.id.et_id);
+        
+
 
         membership.setOnClickListener(new View.OnClickListener() {
             @Override

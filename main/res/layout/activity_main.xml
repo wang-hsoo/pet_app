@@ -7,11 +7,13 @@
     >
 
     <EditText
+        android:id="@+id/et_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="아이디"/>
 
     <EditText
+        android:id="@+id/et_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호"

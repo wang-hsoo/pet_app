@@ -30,7 +30,14 @@ import java.util.GregorianCalendar;
 import android.widget.DatePicker;
 
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.petapp.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class membership extends AppCompatActivity {
     EditText edit_name, pet_name, userId, userPw, userPwCh;
@@ -91,6 +98,9 @@ public class membership extends AppCompatActivity {
         userId =findViewById(R.id.userId);
         userPw =findViewById(R.id.userPw);
         userPwCh =findViewById(R.id.userPwCh);
+        userId = findViewById(R.id.userId);
+        userPw = findViewById(R.id.userPw);
+
 
 
 
@@ -104,6 +114,7 @@ public class membership extends AppCompatActivity {
 
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             public void onClick(View v) {
+
 
 
                 if (edit_name.length() == 0 || edit_age.length() == 0 || vaccine.length() == 0 || pet_name.length() == 0 || userId.length() == 0 || userPw.length() == 0 || userPwCh.length() == 0 || bDate.length() == 0 ) {
@@ -158,20 +169,43 @@ public class membership extends AppCompatActivity {
                     }
 
                 } else if( userPw.getText().toString().equals(userPwCh.getText().toString())){
-                    Toast.makeText(getApplicationContext(), "회원가입완료", Toast.LENGTH_SHORT).show();
-                    String temp = edit_name.getText().toString();
+
+                    String userID = userId.getText().toString();
+                    String userPW = userPw.getText().toString();
+                    String userName = edit_name.getText().toString();
                     String pName = pet_name.getText().toString();
                     String eAge = edit_age.getText().toString();
                     String bD = bDate.getText().toString();
                     String vac = vaccine.getText().toString();
-                    Intent intent = new Intent(getApplicationContext(), introduce.class);
-                    intent.putExtra("edit_name",temp);
-                    intent.putExtra("pet_name",pName);
-                    intent.putExtra("edit_age",eAge);
-                    intent.putExtra("bDate",bD);
-                    intent.putExtra("vaccine",vac);
 
-                    startActivity(intent);
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
+                                if (success){
+                                    Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다." , Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(membership.this, MainActivity.class);
+                                    startActivity(intent);
+                                } else{
+                                    Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다." , Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    };
+
+                    //서버로 volley를 이용해서 요청함
+                    RegisterRequest registerRequest = new RegisterRequest(userID, userPW, userName, pName, eAge, bD, vac, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(membership.this);
+                    queue.add(registerRequest);
+
+
+
 
                 }else{
                     Toast.makeText(getApplicationContext(), "비밀번호를 다시 확인해주세요!", Toast.LENGTH_SHORT).show();
@@ -185,6 +219,9 @@ public class membership extends AppCompatActivity {
                     bDate.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
 
                 }
+
+
+
             }
 
         });

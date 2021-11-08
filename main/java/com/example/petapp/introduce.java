@@ -124,17 +124,6 @@ public class introduce extends AppCompatActivity {
             }
         });
 
-        Intent receive_intent = getIntent();
-        String temp = receive_intent.getStringExtra("edit_name");
-        String pName = receive_intent.getStringExtra("pet_name");
-        String eAge = receive_intent.getStringExtra("edit_age");
-        String bD = receive_intent.getStringExtra("bDate");
-        String vac = receive_intent.getStringExtra("vaccine");
-        user_name.setText(temp);
-        pet_name.setText(pName);
-        edit_age.setText(eAge);
-        bDate.setText(bD);
-        vaccine.setText(vac);
 
         trainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
