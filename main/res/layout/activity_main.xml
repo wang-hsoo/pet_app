@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="50dp"
-    >
+    android:gravity="center"
+  >
 
-    <EditText
-        android:id="@+id/et_id"
+    <TextView
+        android:textSize="24dp"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="아이디"/>
+        android:text="text"/>
 
-    <EditText
-        android:id="@+id/et_pass"
+    <TextView
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="비밀번호"
-        android:inputType="textPassword"/>
+        android:text="아이디"
+        android:textSize="24dp"/>
 
-
-    <Button
-        android:id="@+id/login"
+    <TextView
+        android:id="@+id/tv_id"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인"/>
+        android:text="text"/>
 
-    <Button
-        android:id="@+id/membership"
+    <TextView
+
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="회원가입"
-        />
+        android:text="비밀번호"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/tv_pass"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text"/>
+
+
 
 
 
