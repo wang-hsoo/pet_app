@@ -13,7 +13,7 @@ public class RegisterRequest extends StringRequest {
     final static private String URL = "http://petapp.ivyro.net/Register.php";
     private Map<String, String> map;
 
-    public  RegisterRequest(String userID, String userPassword, String userName, int userAge,  String petName, Response.Listener<String> listener){
+    public  RegisterRequest(String userID, String userPassword, String userName, int userAge,  String petName, String petDate, String petVac, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
@@ -22,6 +22,8 @@ public class RegisterRequest extends StringRequest {
         map.put("userName", userName);
         map.put("userAge", userAge + "");
         map.put("petName", petName);
+        map.put("petDate", petDate);
+        map.put("petVac", petVac);
     }
 
     @Override
