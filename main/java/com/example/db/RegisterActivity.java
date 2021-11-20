@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText et_id, et_pass, et_name, et_age, et_petName, et_petDate,et_petVac, et_passC;
     private Button btn_register;
+    CheckBox check1, check2, check3;
 
 
     @Override
@@ -40,6 +42,9 @@ public class RegisterActivity extends AppCompatActivity {
         et_petDate = findViewById(R.id.et_petDate);
         et_petVac = findViewById(R.id.et_petVac);
         et_passC = findViewById(R.id.et_passC);
+        check1 = findViewById(R.id.check1);
+        check2 = findViewById(R.id.check2);
+        check3 = findViewById(R.id.check3);
 
         btn_register = findViewById(R.id.btn_register);
 
@@ -54,52 +59,60 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "공백부분을 입력해주세요!", Toast.LENGTH_SHORT).show();
 
                     if (et_id.getText().toString().equals("")) {
-                        et_id.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_id.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_id.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_id.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_pass.getText().toString().equals("")) {
-                        et_pass.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_pass.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_pass.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_pass.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_name.getText().toString().equals("")) {
-                        et_name.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_name.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_name.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_name.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_age.getText().toString().equals("")) {
-                        et_age.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_age.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_age.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_age.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_petName.getText().toString().equals("")) {
-                        et_petName.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_petName.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_petName.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_petName.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_petDate.getText().toString().equals("")) {
-                        et_petDate.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_petDate.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_petDate.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_petDate.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_petVac.getText().toString().equals("")) {
-                        et_petVac.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_petVac.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_petVac.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_petVac.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
 
                     if (et_passC.getText().toString().equals("")) {
-                        et_passC.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                        et_passC.setBackground(getResources().getDrawable(R.drawable.redborder));
                     } else {
-                        et_passC.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        et_passC.setBackground(getResources().getDrawable(R.drawable.titleborder));
                     }
+
+                }else if( check1.isChecked() == false || check2.isChecked() == false){
+
+                        if (check1.isChecked() == false){
+                            Toast.makeText(getApplicationContext(), "이용약간에 동의에 체크해주세요", Toast.LENGTH_SHORT).show();
+                        }else if (check2.isChecked() == false){
+                            Toast.makeText(getApplicationContext(), "개인정보 취급 방치 동의에 체크해주세요", Toast.LENGTH_SHORT).show();
+                        }
 
                 }else if (et_pass.getText().toString().equals(et_passC.getText().toString())){
 
@@ -140,8 +153,8 @@ public class RegisterActivity extends AppCompatActivity {
             }else {
                     //비밀번호 다를 시 실행
                     Toast.makeText(getApplicationContext(), "비밀번호를 다시 확인해주세요", Toast.LENGTH_SHORT).show();
-                    et_pass.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-                    et_passC.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+                    et_pass.setBackground(getResources().getDrawable(R.drawable.redborder));
+                    et_passC.setBackground(getResources().getDrawable(R.drawable.redborder));
 
                 }
             }
@@ -162,7 +175,7 @@ public class RegisterActivity extends AppCompatActivity {
         String year_string = Integer.toString(year);
 
 
-        et_petDate.setText("생일: " + year +"년 " + month + "월 " + day + "일" );
+        et_petDate.setText(year +"년 " + month + "월 " + day + "일" );
     }
 
     public void datepicker(View View){
@@ -176,6 +189,13 @@ public class RegisterActivity extends AppCompatActivity {
         String year_string = Integer.toString(year);
 
 
-        et_petVac.setText("1차 접종일: " + year +"년 " + month + "월 " + day + "일" );
+        et_petVac.setText(year +"년 " + month + "월 " + day + "일" );
+    }
+
+
+    //뒤로가기
+    public void backClick(View view){
+        Intent intent = new Intent(RegisterActivity.this, LoginAtivity.class);
+        startActivity(intent);
     }
 }

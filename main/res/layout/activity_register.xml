@@ -3,85 +3,164 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:orientation="vertical"
-    android:layout_margin="30dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#ffffff">
 
-    <EditText
-        android:id="@+id/et_id"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="아이디"
-        android:layout_weight="1"
-        />
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/titleborder"
+        >
 
-    <EditText
-        android:id="@+id/et_pass"
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"
+            android:layout_marginLeft="15dp"
+            android:onClick="backClick"
+            />
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textSize="20dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="비밀번호"
-        android:layout_weight="1"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="30dp">
 
-    <EditText
-        android:id="@+id/et_passC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="비밀번호 확인"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            />
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="이름"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            android:inputType="textPassword"
+            />
 
-    <EditText
-        android:id="@+id/et_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="나이"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/et_passC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 확인"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            android:inputType="textPassword"
+            />
 
-    <EditText
-        android:id="@+id/et_petName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="PET 이름"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            />
 
-    <EditText
-        android:id="@+id/et_petDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="pet 생일"
-        android:onClick="showDatePicker"
-        android:focusable="false"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/et_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="나이"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            />
 
-    <EditText
-        android:id="@+id/et_petVac"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="pet 1차 백신"
-        android:onClick="datepicker"
-        android:focusable="false"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/et_petName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PET 이름"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            />
+
+        <EditText
+            android:id="@+id/et_petDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pet 생년월일"
+            android:onClick="showDatePicker"
+            android:focusable="false"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            />
+
+        <EditText
+            android:id="@+id/et_petVac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pet 1차 백신"
+            android:onClick="datepicker"
+            android:focusable="false"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:background="@drawable/titleborder"
+            />
+
+        <CheckBox
+            android:id="@+id/check1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이용약관 동의"
+            android:textSize="13dp"
+            />
+        <CheckBox
+            android:id="@+id/check2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개인정보 취급 방침 동의"
+            android:textSize="13dp"
+            />
+        <CheckBox
+            android:id="@+id/check3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="마케팅 정보 수신 동의(선택)"
+            android:textSize="13dp"
+
+            />
 
 
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="회원가입"
-        />
+        <Button
+            android:background="@drawable/buttonborder"
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
 
 
 

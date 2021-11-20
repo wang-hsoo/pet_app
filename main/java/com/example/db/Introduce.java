@@ -12,12 +12,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class Introduce extends AppCompatActivity {
     ImageView imgV;
     Button imgBtn;
     ImageButton btnI, btnM;
     LinearLayout intLayout, meLayout;
-    private TextView userName, petName, petDate, petVac;
+    private TextView userName, petName, petDate, petVac, petAge;
 
 
 
@@ -39,6 +44,7 @@ public class Introduce extends AppCompatActivity {
         petName = findViewById(R.id.petName);
         petDate = findViewById(R.id.petDate);
         petVac = findViewById(R.id.petVac);
+        petAge = findViewById(R.id.petAge);
 
 
         //배경 이미지 선택
@@ -89,10 +95,34 @@ public class Introduce extends AppCompatActivity {
         String date = intent.getStringExtra("petDate");
         String Vac = intent.getStringExtra("petVac");
 
-        userName.setText(userN);
-        petName.setText(petN);
-        petDate.setText(date);
-        petVac.setText(Vac);
+        userName.setText(userN + "님 환영합니다.");
+        petName.setText("펫 이름:  " + petN);
+        petDate.setText("생년월일" + date);
+        petVac.setText("1차 백신" + Vac);
+
+
+        //펫 나이 구하기
+        String getDate = date.substring(0, date.indexOf("년"));
+
+
+        Date currentTime = Calendar.getInstance().getTime();
+        SimpleDateFormat yearformat = new SimpleDateFormat( "yyyy", Locale.getDefault());
+
+        String year = yearformat.format(currentTime);
+
+        String age = Integer.toString(Integer.parseInt(year) - Integer.parseInt(getDate));
+
+        petAge.setText("PET 나이:  " + age + "살");
+
+
+
+        //백신 주기 구하기
+        
+
+
+
+
+
 
 
 
