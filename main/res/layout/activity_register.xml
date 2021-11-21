@@ -132,6 +132,7 @@
             android:layout_height="wrap_content"
             android:text="이용약관 동의"
             android:textSize="13dp"
+            android:buttonTint="#DBD0C0"
             />
         <CheckBox
             android:id="@+id/check2"
@@ -139,6 +140,7 @@
             android:layout_height="wrap_content"
             android:text="개인정보 취급 방침 동의"
             android:textSize="13dp"
+            android:buttonTint="#DBD0C0"
             />
         <CheckBox
             android:id="@+id/check3"
@@ -146,7 +148,7 @@
             android:layout_height="wrap_content"
             android:text="마케팅 정보 수신 동의(선택)"
             android:textSize="13dp"
-
+            android:buttonTint="#DBD0C0"
             />
 
 

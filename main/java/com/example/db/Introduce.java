@@ -97,8 +97,8 @@ public class Introduce extends AppCompatActivity {
 
         userName.setText(userN + "님 환영합니다.");
         petName.setText("펫 이름:  " + petN);
-        petDate.setText("생년월일" + date);
-        petVac.setText("1차 백신" + Vac);
+        petDate.setText("생년월일: " + date);
+        petVac.setText("1차 백신: " + Vac);
 
 
         //펫 나이 구하기

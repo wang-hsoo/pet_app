@@ -24,6 +24,8 @@ public class LoginAtivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_ativity);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
